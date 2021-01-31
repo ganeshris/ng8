@@ -1,0 +1,64 @@
+<div class="read-only-pg pad-16">
+    <h3>EXTENSION :READ ONLY</h3>
+    <br/>
+    <!-- who column start -->
+    <a id="who_icon" (click)="goToWhoColumns()"><clr-icon shape="help"  class="is-solid" size="32"></clr-icon></a>
+
+    <clr-modal [(clrModalOpen)]="basic">
+        <h3 class="modal-title"><b>Transaction History</b></h3>
+        <div class="modal-body">
+            <table s-header>
+                <tr>
+                    <td><b>Account Id: </b></td>
+                    <td> {{ extensionField.accountId }} </td>
+                </tr>
+                <tr>
+                    <td><b>Created By: </b></td>
+                    <td> {{ extensionField.createdBy }} </td>
+                </tr>
+                <tr>
+                    <td><b>Created At: </b></td>
+                    <td> {{ extensionField.createdAt | date:'medium' }} </td>
+                </tr>
+                <tr>
+                    <td><b>Updated At: </b></td>
+                    <td> {{ extensionField.updatedAt | date:'medium' }} </td>
+                </tr>
+                <tr>
+                    <td><b>Updated By: </b></td>
+                    <td> {{ extensionField.updatedBy }} </td>
+                </tr>
+            </table>
+            
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-outline" (click)="basic = false">Cancel</button>
+            <button type="button" class="btn btn-primary" (click)="basic = false">Ok</button>
+        </div>
+    </clr-modal>
+    <!-- who column end -->
+
+    <!-- read only form start -->
+    <table class="s-header">
+        <tr>
+            <td>Type: </td>
+            <td> {{ extensionField.type }} </td>
+        </tr>
+        <tr>
+            <td>Field Name: </td>
+            <td> {{ extensionField.field_name }} </td>
+        </tr>
+        <tr>
+            <td>Mapping: </td>
+            <td> {{ extensionField.mapping }} </td>
+        </tr>
+        <tr>
+            <td>Datatype: </td>
+            <td> {{ extensionField.data_type }} </td>
+        </tr>
+        <tr>
+            <td>Form Code: </td>
+            <td> {{ extensionField.form_code }} </td>
+        </tr>
+    </table>
+</div>

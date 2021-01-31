@@ -1,0 +1,30 @@
+@import "../../../../../assets/scss/var";
+.s-info-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  button {
+    outline: none;
+  }
+}
+
+.entry-pg {
+  width: 750px;
+}
+
+.button1::after {
+  content: none;
+}
+.button1:hover::after {
+  content: "ADD ROWS";
+}
+
+#build_extension {
+  cursor:pointer;
+  position: absolute;
+  transition: .5s ease;
+  top: 97px; // barale niche
+  left: 665px; // barale dan
+  //right: 623px; // barale bam
+
+}

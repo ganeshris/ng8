@@ -1,0 +1,45 @@
+.s-legend-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 5px 0;
+}
+
+.s-legend-wrap .s-legend-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 32px;
+  margin-right: 20px;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.s-legend-wrap .s-legend-item .s-legend-color {
+  width: 5px;
+}
+
+.s-legend-wrap .s-legend-item .s-legend-value-wrap {
+  margin: 0px 3px;
+}
+
+.s-legend-wrap .s-legend-item .s-legend-label {
+  font-size: 12px;
+  height: 14px;
+  line-height: 15px;
+}
+
+.s-legend-wrap .s-legend-item .s-legend-value {
+  font-size: 18px;
+  height: 18px;
+}
+/*# sourceMappingURL=legend.css.map */

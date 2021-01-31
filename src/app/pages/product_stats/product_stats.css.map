@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AACA,AAAA,EAAE,CAAA;EAAC,UAAU,EAAE,IAAI;CAAG;;AACtB,AAAA,kBAAkB,CAAC;EACjB,MAAM,EAAE,GAAG;EACX,OAAO,EAAC,IAAI;EACZ,SAAS,EAAC,IAAI;EACd,cAAc,EAAC,GAAG;EAClB,eAAe,EAAC,MAAM;CAQvB;;AAbD,AAME,kBANgB,CAMhB,UAAU,CAAA;EACR,MAAM,EAAC,IAAI;EACX,OAAO,EAAC,MAAM;EACd,gBAAgB,EAAE,IAAI;EACtB,MAAM,EAAC,cAAc;EACrB,aAAa,EAAE,GAAG;CACnB",
+    "sources": [
+        "product_stats.scss",
+        "../../../assets/scss/_var.scss"
+    ],
+    "names": [],
+    "file": "product_stats.css"
+}

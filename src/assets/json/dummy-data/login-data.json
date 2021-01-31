@@ -1,0 +1,13 @@
+{
+    "success"    : true,
+    "message"    : "SUCCESS",
+    "landingPage": "/home/dashboard/order",
+    "user"       : {
+        "userId"     : 1,
+        "email"      : "admin@gmail.com",
+        "displayName": "Theresa Russell",
+        "username"   : "russ",
+        "roles"      :  "ADMIN, USER",
+        "token"      : "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBnbWFpbC5jb20iLCJzY29wZXMiOiJST0xFX1VTRVIsUk9MRV9BRE1JTiIsImlhdCI6MTYwNzk1NjA4OCwiZXhwIjoxNjA3OTc0MDg4fQ.SwWnyZQpix6yR2OjYgHDH3DTmd6zh6ZMX6m3DJUY3vc"
+    }
+}

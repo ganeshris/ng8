@@ -1,0 +1,48 @@
+<clr-modal [(clrModalOpen)]="basic" [clrModalClosable]="false" [clrModalStaticBackdrop]="true">
+    <h3 class="modal-title"><b>Add Extension Field</b></h3>
+    <div class="modal-body">
+        <!-- entry form-->
+        <form [formGroup]="extFieldForm" (ngSubmit)="onSubmit()">
+            <table>
+                <tr>
+                    <td style="width:125px;">Type: </td>
+                    <td>
+                        <select colspan="2" type="text" formControlName="type" style="width:180px">
+                            <option value="">Choose Type</option>
+                            <option *ngFor="let type of types" [ngValue]="type">{{ type | uppercase }}</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:125px;">Field Name: </td>
+                    <td>
+                        <input colspan="2" type="text" formControlName="field_name" placeholder="Enter Field Name"
+                            style="width:180px">
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:125px;">Mapping: </td>
+                    <td>
+                        <select colspan="2" type="text" formControlName="mapping" style="width:180px">
+                            <option value="">Choose Mapping</option>
+                            <option *ngFor="let lookup of lookups" [ngValue]="lookup">{{ lookup | uppercase }}</option>
+                        </select>
+
+                </tr>
+                <tr>
+                    <td style="width:125px;">Datatype: </td>
+                    <td>
+                        <select colspan="2" type="text" formControlName="data_type" style="width:180px">
+                            <option value="">Choose Datatype</option>
+                            <option *ngFor="let dt of datatypes" [ngValue]="dt">{{ dt | uppercase }}
+                            </option>
+                        </select>
+                </tr>
+            </table>
+            <button type="submit" class="btn btn-primary" [disabled]="!extFieldForm.valid">SUBMIT</button>
+        </form>
+    </div>
+     <div class="modal-footer">
+        <button type="button" class="btn btn-outline" (click)="close()">Cancel</button>
+    </div>
+</clr-modal>

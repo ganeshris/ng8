@@ -1,0 +1,20 @@
+<ngx-datatable-column name="Extension 1" prop="extn1" > 
+    <ng-template ngx-datatable-cell-template let-value="value">{{value}}</ng-template>
+</ngx-datatable-column>
+
+<ngx-datatable-column *ngFor="let col of extColumns" [name]="col.name" [prop]="col.prop">
+</ngx-datatable-column>
+
+<!-- <ngx-datatable-column name="Extension 1">
+    <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>{{ value }}</ng-template>
+  </ngx-datatable-column> -->
+
+<!-- <ngx-datatable-column name="Company">
+    <ng-template ngx-datatable-cell-template let-value="value">
+        <child-component [inputVal]="value"></child-component>
+    </ng-template>
+</ngx-datatable-column> -->
+
+<!-- <ng-template #myDetailTemplate let-row="row">
+    From the outside with access to the current row: {{row.name}}
+</ng-template> -->

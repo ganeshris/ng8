@@ -1,0 +1,22 @@
+[
+    {
+        "id": "1",
+        "fileName": "Text File1.txt",
+        "fileLocation": "./assets/documents/Folder 1/Text File1.txt"
+    },
+    {
+        "id": "2",
+        "fileName": "Text File2.txt",
+        "fileLocation": "./assets/documents/Folder 1/Text File2.txt"
+    },
+    {
+        "id": "3",
+        "fileName": "base.html",
+        "fileLocation": "C:/Users/jpcho/OneDrive/Desktop/doc/type of files/base.html"
+    },
+    {
+        "id": "4",
+        "fileName": "FileDetails.java",
+        "fileLocation": "C:/Users/jpcho/OneDrive/Desktop/doc/type of files/FileDetails.java"
+    }
+]

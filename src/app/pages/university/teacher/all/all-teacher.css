@@ -1,0 +1,37 @@
+.s-info-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.s-info-bar button {
+  outline: none;
+}
+
+.grid-pg {
+  width: 750px;
+}
+
+#add {
+  position: absolute;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  top: 16%;
+  left: 79%;
+}
+
+#who_column {
+  position: absolute;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  top: 97px;
+  left: 145px;
+}
+/*# sourceMappingURL=all-teacher.css.map */

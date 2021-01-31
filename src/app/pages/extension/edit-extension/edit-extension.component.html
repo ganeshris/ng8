@@ -1,0 +1,40 @@
+<div class="read-only-pg pad-16">
+  <h3>EDIT EXTENSION</h3>
+  <br />
+
+  <section class="form-block" style="margin-top:32px">
+      <form (ngSubmit)="onSubmit()">
+          <table>
+            <tr>
+                <td>Type: </td>
+                <td colspan="2">
+                    <!-- <input type="type" name="type" [(ngModel)]="extensionField.type">  -->
+                    <select [(ngModel)]="extensionField.type" colspan="2" type="text" name="type" style="width:180px">
+                        <option *ngFor="let type of types" [ngValue]="type">{{ type | uppercase }}</option>
+                    </select>
+                </td>
+            </tr>
+              <tr>
+                  <td>Field Name: </td>
+                  <td colspan="2"><input type="text" name="field_name" [(ngModel)]="extensionField.field_name"></td>
+              </tr>
+              <tr>
+                  <td>Mapping: </td>
+                  <!-- <td colspan="2"><input type="text" name="mapping" [(ngModel)]="extensionField.mapping"> </td> -->
+                  <select [(ngModel)]="extensionField.mapping" colspan="2" type="text" name="mapping" style="width:180px">
+                    <option *ngFor="let lookup of lookups" [ngValue]="lookup">{{ lookup | uppercase }}</option>
+                </select>
+              </tr>
+              <tr>
+                  <td>Data Type:</td>
+                  <!-- <td colspan="2"><input type="text" name="data_type" [(ngModel)]="extensionField.data_type"> </td> -->
+                  <select [(ngModel)]="extensionField.data_type" colspan="2" type="text" name="data_type" style="width:180px">
+                    <option *ngFor="let dt of datatypes" [ngValue]="dt">{{ dt | uppercase }}</option>
+                </select>
+              </tr>
+          </table>
+          <br>
+          <button type="submit" form-control class="btn btn-primary">UPDATE</button>
+      </form>
+  </section>
+</div>

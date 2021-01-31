@@ -1,0 +1,57 @@
+<div class="pad-16" *ngIf="userProfile">
+  <h3><b>My Profile Settings</b></h3>
+  <br />
+  <div *ngIf="image; else def">
+    <img [src]="image" alt="Avatar" style="height:100px;width:100px;border-radius:50%;">
+  </div>
+  <ng-template #def>
+    <img src="../../../assets/images/profile-icon.png" alt="Avatar" style="height:100px;width:100px;border-radius:50%;">
+  </ng-template>
+  <div *ngIf="message" style="color:indianred; font-weight: bold"> {{ message }}</div>
+  <input 
+    style="display: none"
+    type="file" accept="image/*"
+    (change)="onSelectFile($event)"
+    #fileInput>
+    <a (click)="fileInput.click()">upload your photo</a>
+    <!-- <button type="button" class="btn btn-primary" (click)="picUpload()">Upload</button> -->
+
+  <section class="form-block" style="margin-top:32px">
+      <form (ngSubmit)="onSubmit()">
+
+        <!-- <input type="file" accept="image/*" (change)="onSelectFile($event.target.files)" name="picture" [(ngModel)]="userProfile.picture"> -->
+          <table>
+              <tr>
+                  <td>Your Full Name: </td>
+                  <td colspan="2"><input type="text" name="fullName" [(ngModel)]="userProfile.fullName"></td>
+              </tr>
+              <tr>
+                  <td>Pronouns</td>
+                  <td colspan="2"><input type="text" name="pronouns" [(ngModel)]="userProfile.pronouns"> </td>
+              </tr>
+              <tr>
+                  <td>Role:</td>
+                  <td colspan="2"><input type="text" name="role" [(ngModel)]="userProfile.role"> </td>
+              </tr>
+              <tr>
+                  <td>Depertment or Team</td>
+                  <td><input colspan="2" type="text" name="department" [(ngModel)]="userProfile.department" style="width:180px" /></td>
+              </tr>
+              <tr>
+                  <td style="width:125px;">Email </td>
+                  <td>
+                      <input colspan="2" readonly type="text" name="email" [(ngModel)]="userProfile.email" style="width:180px" />
+                  </td>
+              </tr>
+              <tr>
+                <td style="width:125px;">About Me </td>
+                <td>
+                    <textarea colspan="2" rows="4" cols="50" name="about" [(ngModel)]="userProfile.about" style="width:180px"></textarea>
+                </td>
+            </tr>
+          </table>
+          <br>
+          <button type="submit" form-control class="btn btn-primary">UPDATE</button>
+      </form>
+  </section>
+</div>

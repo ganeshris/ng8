@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "edit-extension.component.scss",
+        "../../../../assets/scss/_var.scss"
+    ],
+    "names": [],
+    "file": "edit-extension.component.css"
+}

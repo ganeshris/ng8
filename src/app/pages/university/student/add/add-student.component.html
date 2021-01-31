@@ -1,0 +1,30 @@
+<div class="entry-pg pad-16">
+    <h3>STUDENT ENTRY FORM</h3>
+    <br />
+    <section class="form-block" style="margin-top:32px">
+        <!-- entry form-->
+        <form [formGroup]="entryForm" (ngSubmit)="onSubmit()">
+            <table>
+                <tr>
+                    <td style="width:125px;">Name: </td>
+                    <td><input colspan="2" type="text" formControlName="name" placeholder="Enter Name"
+                            style="width:180px"></td>
+                </tr>
+                
+                <tr>
+                    <td style="width:125px;">Depertment: </td>
+                    <td><input colspan="2" type="text" formControlName="depertment" placeholder="Enter Depertment"
+                            style="width:180px"></td>
+                </tr>
+                <tr>
+                    <td style="width:125px;">Roll Number: </td>
+                    <td><input colspan="2" type="number" formControlName="rollNumber" placeholder="Enter Roll Number"
+                            style="width:180px"></td>
+                </tr>
+            </table>
+            <br>
+            <button type="submit" class="btn btn-primary" [disabled]="!entryForm.valid">SUBMIT</button>
+        </form>
+    </section>
+
+</div>

@@ -1,0 +1,33 @@
+@import '../../../../assets/scss/var';
+
+.s-info-bar{
+    display:flex;
+    flex-direction: row;
+    justify-content:space-between;
+    button{outline:none;}
+}
+
+.edit-pg {
+    width:750px;
+}
+
+#lines {
+    table, th, td {
+    border: 0.5px solid  #f1f0f0;
+    border-collapse: collapse;
+  }
+  input, input :focus {
+    //-webkit-appearance: none;
+    outline: none;
+    border-width:0px;
+    border:none;
+  }
+
+  .add-role {
+    //cursor: pointer;
+    a, a label {
+     cursor: pointer;
+    }
+    
+  }
+}

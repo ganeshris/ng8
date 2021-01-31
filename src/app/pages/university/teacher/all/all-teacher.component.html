@@ -1,0 +1,102 @@
+<div class="grid-pg  pad-16">
+    <h3>GRID VIEW</h3>
+    <button id="add" class="btn btn-primary" (click)="goToAdd()"><clr-icon shape="plus"></clr-icon>ADD</button>
+
+    <!-- who column start -->
+    <clr-modal [(clrModalOpen)]="basic">
+        <h3 class="modal-title"><b>Transaction History</b></h3>
+        <div class="modal-body">
+            <table s-header *ngIf="whoColumns">
+                <tr>
+                    <td><b>Account Id: </b></td>
+                    <td> {{ whoColumns.accountId }} </td>
+                </tr>
+                <tr>
+                    <td><b>Created By: </b></td>
+                    <td> {{ whoColumns.createdBy }} </td>
+                </tr>
+                <tr>
+                    <td><b>Created At: </b></td>
+                    <td> {{ whoColumns.createdAt | date:'medium' }} </td>
+                </tr>
+                <tr>
+                    <td><b>Updated At: </b></td>
+                    <td> {{ whoColumns.updatedAt | date:'medium' }} </td>
+                </tr>
+                <tr>
+                    <td><b>Updated By: </b></td>
+                    <td> {{ whoColumns.updatedBy }} </td>
+                </tr>
+            </table>
+            
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-outline" (click)="basic = false">Cancel</button>
+            <button type="button" class="btn btn-primary" (click)="basic = false">Ok</button>
+        </div>
+    </clr-modal>
+    <!-- who column end -->
+    
+<br>
+<div class="row">
+    <div class="col-lg-12">
+        <div style="width:1140px">
+            <div class="s-info-bar">
+                <!-- FILTER BUTTON-->
+                <input
+                    type="text"
+                    style="padding:8px;margin:15px auto;width:30%;"
+                    placeholder="Type to filter the name column..."
+                    (keyup)="doFilter($event)"
+                />
+                <div style="flex:1"></div>
+                <div *ngIf="isLoading" class="spinner spinner-md" style="margin:0 10px;">Loading...</div>
+            </div>
+            <ngx-datatable
+              #table
+              style='height:450px; width:100%;'
+              [rows]="rows"
+              [columnMode] ="'force'"
+              [columnMode]="'standard'"
+              [headerHeight]="45"
+              [footerHeight]="45"
+              [rowHeight]="36"
+              [scrollbarV]="true"
+          >
+          <ngx-datatable-column name="Actions" sortable="false">
+            <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+                <a (click)="goToReadOnly(row.id)"><clr-icon shape="eye" class="is-info"></clr-icon></a>
+                <a (click)="goToEdit(row.id)"><clr-icon shape="edit" class="is-error"></clr-icon></a>
+                </ng-template>
+          </ngx-datatable-column>
+
+          <ngx-datatable-column *ngFor="let col of columns" [name]="col.name" [prop]="col.prop" [width]="col.width" >
+          </ngx-datatable-column>
+
+          <!-- EXTENSION -->
+            <teacher-grid-extension></teacher-grid-extension>
+          <!-- EXTENSION -->
+            
+        <!-- Row Detail Template -->
+        <!-- <ngx-datatable-row-detail [template]="detailTemplate "rowHeight="100">
+        </ngx-datatable-row-detail> -->
+          
+
+          </ngx-datatable>
+        </div>
+    </div>
+</div>
+</div>
+<!-- <ng-template #instructorById let-row="row" let-value="value" let-i="index">
+  <a (click)="goToReadOnly(value)" attr.data-itemid="{{value}}"><clr-icon shape="eye"  class="is-info"></clr-icon></a>
+  <a (click)="goToEdit(value)" attr.data-itemid="{{value}}"><clr-icon shape="edit" class="is-error"></clr-icon></a>
+</ng-template>
+
+<ng-template #txId let-row="row" let-value="value" let-i="index">
+    <a (click)="goToWhoColumns(value)" attr.data-itemid="{{value}}"><clr-icon shape="help"  class="is-solid"></clr-icon></a>
+</ng-template> -->
+
+
+
+
+

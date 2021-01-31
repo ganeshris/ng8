@@ -1,0 +1,85 @@
+<div class="read-only-pg pad-16">
+    <h3>EDIT FORM</h3>
+    <br />
+
+    <section class="form-block" style="margin-top:32px">
+        <form (ngSubmit)="onSubmit()">
+            <table>
+                <tr>
+                    <td>Name: </td>
+                    <td colspan="2"><input type="text" name="name" [(ngModel)]="teacher.name"></td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td colspan="2"><input type="email" name="email" [(ngModel)]="teacher.email"> </td>
+                </tr>
+                <tr>
+                    <td>Mobile Number:</td>
+                    <td colspan="2"><input type="number" name="phoneNumber" [(ngModel)]="teacher.phoneNumber"> </td>
+                </tr>
+                <tr>
+                    <td>Salary:</td>
+                    <td colspan="2"><input type="number" name="salary" [(ngModel)]="teacher.salary"> </td>
+                </tr>
+            </table>
+
+            <teacher-edit-extension [(teacherExtension)]="teacher"></teacher-edit-extension>
+            <br>
+            <!-- HEADER LINE UPDATE-->
+            <h4>Students</h4>
+            <!-----H-L LINE part(FormArray For Multiple Lines)---->
+            <div class="row">
+                <div class="col-lg-12">
+                    <table id="lines" class="table" style="width:100%;">
+                        <thead>
+                            <tr>
+                                <th class="left" style="width:200px;">Name</th>
+                                <th class="left" style="width:200px;">Depertment</th>
+                                <th class="left" style="width:200px;">Roll Number</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let student of students">
+                                <td class="left">
+                                    <input type="text" [name]="student.name" [(ngModel)]="student.name" [ngModelOptions]="{standalone: true}"
+                                        placeholder="Enter Name">
+                                </td>
+                                <td class="left"><input type="text" [name]="student.depertment"
+                                        [(ngModel)]="student.depertment" [ngModelOptions]="{standalone: true}" placeholder="Enter Name"></td>
+                                <td class="left"><input type="text" [name]="student.rollNumber"
+                                        [(ngModel)]="student.rollNumber" [ngModelOptions]="{standalone: true}" placeholder="Enter Name"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- <table class="table-responsive">
+                <thead>
+                    <tr>
+                        <th style="width:125px;">Name</th>
+                        <th style="width:125px;">Depertment</th>
+                        <th style="width:125px;">Roll Number</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let student of students;let i = index;">
+                        <td>
+                            <input colspan="2" type="text" [name]="student.name" [(ngModel)]="student.name"
+                                placeholder="Enter Name" style="width:180px">
+                        </td>
+
+                        <td>
+                            <input colspan="2" type="text" [name]="student.depertment" [(ngModel)]="student.depertment" placeholder="Enter Depertment"
+                                style="width:180px">
+                        </td>
+                        <td>
+                            <input colspan="2" type="number" [name]="student.rollNumber" [(ngModel)]="student.rollNumber"
+                                placeholder="Enter Roll Number" style="width:180px">
+                        </td>
+                    </tr>
+                </tbody>
+            </table> -->
+            <button type="submit" form-control class="btn btn-primary">UPDATE</button>
+        </form>
+    </section>
+</div>

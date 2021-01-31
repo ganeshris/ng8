@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AACA,AAAA,iBAAiB,CAAC;EAChB,QAAQ,EAAE,KAAK;EACf,GAAG,EAAC,CAAC;EACL,IAAI,EAAC,CAAC;EACN,KAAK,EAAC,IAAI;EACV,MAAM,EAAC,IAAI;EACX,OAAO,EAAC,IAAI;EACZ,WAAW,EAAE,MAAM;EACnB,OAAO,EAAC,IAAI;EACZ,gBAAgB,ECiCH,OAAO;EDhCpB,KAAK,ECca,IAAI;EDbtB,SAAS,ECDO,IAAI;CDErB",
+    "sources": [
+        "page-not-found.scss",
+        "../../../assets/scss/_var.scss"
+    ],
+    "names": [],
+    "file": "page-not-found.css"
+}

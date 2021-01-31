@@ -1,0 +1,11 @@
+@import '../../../../../assets/scss/var';
+.s-info-bar{
+    display:flex;
+    flex-direction: row;
+    justify-content:space-between;
+    button{outline:none;}
+}
+
+.edit-pg {
+    width:750px;
+}

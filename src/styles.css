@@ -1,0 +1,416 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  font-size: 12px;
+  font-weight: normal;
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+h1 {  font:$s-f1-size $s-f-family;font-weight:600  }
+h2 {  font:$s-f2-size $s-f-family;font-weight:600  }
+h3 {  font:$s-f3-size $s-f-family;font-weight:600  }
+h4 {  font:$s-f4-size $s-f-family;font-weight:600  }
+h5 {  font:$s-f5-size $s-f-family;font-weight:600  }
+h6 {  font:$s-f6-size $s-f-family;font-weight:600  }
+*/
+.s-f1 {
+  font: 24px;
+}
+
+.s-f2 {
+  font: 20px;
+}
+
+.s-f3 {
+  font: 18px;
+}
+
+.s-f4 {
+  font: 16px;
+}
+
+.s-f5 {
+  font: 14px;
+}
+
+.s-f6 {
+  font: 12px;
+}
+
+.s-f-tiny {
+  font-size: 10px;
+}
+
+.s-f-body {
+  font-size: 12px;
+}
+
+.s-f-small {
+  font-size: 16px;
+}
+
+.s-f-medium {
+  font-size: 24px;
+}
+
+.s-f-large {
+  font-size: 32px;
+}
+
+.s-bold-500 {
+  font-weight: 500;
+}
+
+.s-bold-600 {
+  font-weight: 600;
+}
+
+.s-bold {
+  font-weight: bold;
+}
+
+.s-c-text {
+  color: #333;
+}
+
+.s-c-inverse-text {
+  color: #eee;
+}
+
+.s-c-disable-text {
+  color: gray;
+}
+
+.s-c-white {
+  color: #fff;
+}
+
+.s-c-gray {
+  color: gray;
+}
+
+.s-c-primary {
+  color: #005d84;
+}
+
+.s-c-info {
+  color: #007cbb;
+}
+
+.s-c-error {
+  color: #CE1126;
+}
+
+.s-c-warning {
+  color: #E3642B;
+}
+
+.s-c-good {
+  color: #6EA204;
+}
+
+.s-bg-main {
+  background-color: #ffffff;
+}
+
+.s-bg-inverse {
+  background-color: #32404e;
+}
+
+.s-bg-soft-white {
+  background-color: whitesmoke;
+}
+
+.s-bg-info {
+  background-color: #007cbb;
+}
+
+.s-bg-error {
+  background-color: #CE1126;
+}
+
+.s-bg-warning {
+  background-color: #E3642B;
+}
+
+.s-bg-good {
+  background-color: #6EA204;
+}
+
+.s-shadow-1 {
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.s-shadow-2 {
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.s-shadow-3 {
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.s-shadow-4 {
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.s-shadow-5 {
+  -webkit-box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+.s-hidden {
+  display: none;
+}
+
+.s-ellipses {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.s-nowrap {
+  white-space: nowrap;
+}
+
+.s-err-msg {
+  color: #CE1126;
+}
+
+.s-link {
+  color: #007cbb;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.s-link:hover {
+  text-decoration: underline;
+}
+
+.pad-16 {
+  padding: 16px;
+}
+
+.no-margin {
+  padding: 0;
+  margin: 0;
+}
+
+.s-hbox-align-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.s-hbox-align-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.s-hbox-align-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+html {
+  /* make sure we use up the whole viewport */
+  width: 100%;
+  min-height: 100vh;
+}
+
+body {
+  width: 100%;
+  background-color: #fafafa;
+}
+
+ngx-datatable {
+  font-family: Metropolis,Avenir Next,Helvetica Neue,Arial,sans-serif;
+  font-size: 13px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  padding: 0;
+  background-color: #fff;
+}
+
+ngx-datatable .datatable-header, ngx-datatable .datatable-footer {
+  font-size: 11px;
+  line-height: 18px;
+  font-weight: bold;
+  background-color: #fafafa;
+}
+
+ngx-datatable .datatable-header {
+  -webkit-box-shadow: 0 2px 4px 0px #ccc;
+          box-shadow: 0 2px 4px 0px #ccc;
+}
+
+ngx-datatable .datatable-header .datatable-header-cell {
+  line-height: 22px;
+  padding-left: 10px;
+  height: 22px;
+}
+
+ngx-datatable .datatable-header .datatable-header-cell:not(:first-child) {
+  border-left: 1px solid #ccc;
+}
+
+ngx-datatable .datatable-footer {
+  border-top: 1px solid #ccc;
+}
+
+ngx-datatable .datatable-footer .page-count {
+  margin: 10px;
+}
+
+ngx-datatable .datatable-footer .pages a {
+  padding: 8px;
+  color: inherit;
+}
+
+ngx-datatable .datatable-footer .pages.active a {
+  padding: 8px;
+  color: #007cbb;
+  background-color: #ddd;
+  text-align: center;
+}
+
+ngx-datatable .datatable-header-inner {
+  padding: 12px;
+}
+
+ngx-datatable .datatable-body-cell {
+  padding: 8px 0 10px 20px;
+  border-top: 1px solid #ddd;
+}
+
+ngx-datatable .pager i {
+  font-size: 18px;
+  vertical-align: middle;
+}
+
+ngx-charts-advanced-pie-chart .item-value {
+  margin-top: 0 !important;
+}
+
+header.legend-title {
+  background-color: transparent;
+  color: #333;
+  height: inherit;
+}
+
+.s-dashboard-pg .chart-legend .legend-wrap {
+  width: 105px;
+}
+
+.s-badge {
+  font-size: 11px;
+  font-weight: normal;
+  border-radius: 2px;
+  padding: 2px 5px;
+}
+
+.s-badge.s-badge-error, .s-badge.s-badge-onhold {
+  background-color: #CE1126;
+  color: #fff;
+}
+
+.s-badge.s-badge-warning {
+  background-color: #ff8e28;
+  color: #333;
+}
+
+.s-badge.s-badge-good {
+  background-color: #6EA204;
+  color: #333;
+}
+
+.s-badge.s-badge-new {
+  background-color: #007cbb;
+  color: #fff;
+}
+
+.tile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 16px;
+  margin: 16px;
+  border-radius: 2px;
+}
+
+.tile.column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.tile.center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tile.white {
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.clr-input {
+  color: #212529;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  padding: .6rem .75rem;
+  margin-top: 3px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.clr-dropdown {
+  color: #212529;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  margin-top: 3px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+/*# sourceMappingURL=styles.css.map */

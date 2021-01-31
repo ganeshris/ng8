@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AACA,AAAA,WAAW,CAAA;EACP,OAAO,EAAC,IAAI;EACZ,cAAc,EAAE,GAAG;EACnB,eAAe,EAAC,aAAa;CAEhC;;AALD,AAII,WAJO,CAIP,MAAM,CAAA;EAAC,OAAO,EAAC,IAAI;CAAG;;AAG1B,AAAA,QAAQ,CAAC;EACL,KAAK,EAAC,KAAK;CACd",
+    "sources": [
+        "edit-instructor.scss",
+        "../../../../assets/scss/_var.scss"
+    ],
+    "names": [],
+    "file": "edit-instructor.css"
+}

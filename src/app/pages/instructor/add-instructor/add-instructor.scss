@@ -1,0 +1,47 @@
+@import '../../../../assets/scss/var';
+.s-info-bar{
+    display:flex;
+    flex-direction: row;
+    justify-content:space-between;
+    button{outline:none;}
+}
+
+.entry-pg {
+    width:750px;
+}
+
+$bg-color:#485969;
+
+.entryform h3{
+    font-weight: 500;
+    border-bottom: 2px solid $bg-color;
+    width: fit-content;
+}
+.userdetails{
+    background-color: $bg-color;
+    height: 40px;
+}
+.userdetails p {
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.clr-input{
+    color: #212529;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    padding: .6rem .75rem;
+    margin-top: 3px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.mybtn{
+    text-align: center;
+}
+.btn {
+    background-color: $bg-color;  
+    color: white;
+    text-transform: none;
+}

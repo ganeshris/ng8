@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,CAAC,AAAA,SAAS,CAAC;EACP,cAAc,EAAE,IAAI;EACpB,MAAM,EAAE,OAAO;CAClB;;AAED,AAAA,OAAO,CAAC;EACJ,OAAO,EAAC,KAAK;EACb,MAAM,EAAE,IAAI;EACZ,OAAO,EAAE,IAAI;CAChB",
+    "sources": [
+        "home.scss",
+        "../assets/scss/_var.scss"
+    ],
+    "names": [],
+    "file": "home.css"
+}

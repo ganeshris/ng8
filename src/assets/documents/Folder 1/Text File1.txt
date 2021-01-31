@@ -1,0 +1,12 @@
+Hello, I am Niladri Sen. This is a dummy Text File 1.
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test Code</title>
+</head>
+<body>
+	<h3>Header h3</h3>
+	<p>I am a paragraph</p>
+    <p> I am a new Paragraph</p>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<div class="pad-16">
+  <h3><b>Organization and Workspaces</b></h3>
+  <br />
+
+  <section class="form-block" style="margin-top:32px">
+    <!--  <form (ngSubmit)="onSubmit()"> -->
+    <table *ngIf="sys_account">
+      <tr>
+        <td><b>Organization:</b> </td>
+        <td> {{ sys_account.companyName }}</td>
+      </tr>
+      <tr>
+        <td><b>GST Number:</b> </td>
+        <td>{{ sys_account.gstNumber }}</td>
+      </tr>
+      <tr>
+        <td><b>Workspace: </b></td>
+        <td>{{sys_account.workspace }}</td>
+      </tr>
+    </table>
+    <a routerLink="/create-workspace">create new workspace</a>
+  </section>
+  <hr>
+  <!-- ADD USERS [hidden]="isAdmin()" -->
+  <button class="btn btn-primary" (click)="addUsers()">ADD USERS FOR YOUR TEAM</button>
+  <hr>
+
+  <!-- PASSWORD RESET -->
+  <section class="form-block" style="margin-top:32px">
+    <table>
+      <tr>
+        <td><b>Password:</b> </td><br />
+        <td>Change Password for your account <a routerLink="../reset-password">Change password</a></td> 
+        <!--routerLink="../reset-password"  (click)="goToResetPassword() -->
+      </tr>
+    </table>
+  </section>
+  <hr>
+
+  <!-- KILL SESSION -->
+  <section class="form-block" style="margin-top:32px">
+    <table>
+      <tr>
+        <td><b>Security: </b> </td><br>
+        <td>Logout of all sessions except this current browser <a routerLink="/session-kill">Logout other
+              sessions</a></td>
+      </tr>
+    </table>
+  </section>
+  <hr>
+
+  <!-- DEACTIVATE ACCOUNT -->
+  <section class="form-block" style="margin-top:32px">
+    <table>
+      <tr>
+        <td><b>Deactivation: </b> </td><br />
+        <td>Remove access to all organizations and workspace in cloudnsure  <a
+              routerLink="/deactivate-account">Deactivate account</a></td>
+      </tr>
+    </table>
+  </section>
+</div>

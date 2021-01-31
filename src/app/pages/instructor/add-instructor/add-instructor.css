@@ -1,0 +1,60 @@
+.s-info-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.s-info-bar button {
+  outline: none;
+}
+
+.entry-pg {
+  width: 750px;
+}
+
+.entryform h3 {
+  font-weight: 500;
+  border-bottom: 2px solid #485969;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.userdetails {
+  background-color: #485969;
+  height: 40px;
+}
+
+.userdetails p {
+  color: white;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.clr-input {
+  color: #212529;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  padding: .6rem .75rem;
+  margin-top: 3px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.mybtn {
+  text-align: center;
+}
+
+.btn {
+  background-color: #485969;
+  color: white;
+  text-transform: none;
+}
+/*# sourceMappingURL=add-instructor.css.map */

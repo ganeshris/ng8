@@ -1,0 +1,102 @@
+<div class="read-only-pg pad-16" *ngIf="org_user">
+    <h3><b>EDIT USERS</b></h3>
+    <br />
+
+    <section class="form-block" style="margin-top:32px" *ngIf="org_user">
+        <form (ngSubmit)="onSubmit()">
+            <table>
+                <tr>
+                    <td>Email: </td>
+                    <td colspan="2"><input type="text" name="email" [(ngModel)]="org_user.email"></td>
+                </tr>
+                <tr>
+                    <td>First Name:</td>
+                    <td colspan="2"><input type="text" name="firstName" [(ngModel)]="org_user.firstName"> </td>
+                </tr>
+                <tr>
+                    <td>Last Name:</td>
+                    <td colspan="2">
+                        <input type="text" name="lastName" [(ngModel)]="org_user.lastName">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Full Name:</td>
+                    <td colspan="2">
+                        <input type="text" name="fullName" [(ngModel)]="org_user.fullName">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Department:</td>
+                    <td colspan="2">
+                        <input type="text" name="department" [(ngModel)]="org_user.department">
+                    </td>
+                </tr>
+                <!-- <tr>
+                    <td>Roles</td>
+                    <td colspan="2">
+                        <select name="roles" [(ngModel)]="org_user.roles">
+                            <option value="">Choose Type</option>
+                            <option *ngFor="let type of page_event" [ngValue]="type">{{ type }}</option>
+                        </select>
+                    </td>
+                </tr> -->
+            </table>
+            <button type="submit" form-control class="btn btn-primary">UPDATE</button>
+        </form>
+            <!-----H-L LINE part(FormArray For Multiple Lines)---->
+            <br>
+            <div class="add-role">
+            <h4><b>Add Roles to User</b></h4>
+                <select [(ngModel)]="addedRoleId">
+                    <option value="">select a role</option>
+                   <option *ngFor="let role of rolesDropDown" [value]="role.id">{{role.name}}</option>
+                </select>
+                <!-- <button class="btn btn-primary" (click)="onAddRoles()">ADD ROLES</button> -->
+                <a id="add" (click)="onAddRoles()"><clr-icon shape="check"></clr-icon>ADD</a>
+            </div>
+            <br>
+            <h4>Role Details</h4>
+            <div class="row">
+                <div class="col-lg-12">
+                    <table id="lines" class="table" style="width:50%;">
+                        <thead>
+                            <tr>
+                                <th class="left" style="width:125px;">Name</th>
+                                <th class="right" style="width:125px;">Actions</th>
+                            </tr>
+                        </thead>
+                        <!-- <tbody>
+                            <tr *ngFor="let role of org_user.roles; let i=index">
+                               
+                                <td class="left">
+                                    <select [name]="role.name" [(ngModel)]="role.name" [ngModelOptions]="{standalone: true}">
+                                        <option value="">Choose Roles</option>
+                                        <option *ngFor="let r of roles" [ngValue]="r">{{ r }}</option>
+                                    </select>
+                                </td>
+                                <td class="right">
+                                    <a (click)="onRemoveLines(i)">
+                                        <clr-icon shape="trash" class="is-error"></clr-icon>
+                                    </a>
+                                </td>
+                             </div>
+                            </tr>
+                        </tbody> -->
+
+                        <tbody>
+                            <tr *ngFor="let role of org_user.roles">
+                                <td class="left">{{ role.name }}</td>
+                                <td class="right">
+                                    <a (click)="onRemoveRoles(role.id)">
+                                        <clr-icon shape="trash" class="is-error"></clr-icon>
+                                    </a>
+                                </td>
+                                <!-- <td class="right">{{ students.createdAt | date:'medium' }}</td>
+                                <td class="right">{{ students.updatedAt | date:'medium' }}</td> -->
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+    </section>
+</div>

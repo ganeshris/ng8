@@ -1,0 +1,106 @@
+<div class="no-margin">  <!-- class="main-container" will create fixed height container -->
+<div class="main-container">
+    <!--Alert -->
+    <div *ngIf="showAppAlert" class="alert alert-app-level">
+        <button type="button" class="close" aria-label="Close" (click)="closeAppAlert()">
+            <clr-icon aria-hidden="true" shape="close"></clr-icon>
+        </button>
+        <div class="alert-item">
+            <div class="alert-text">
+                Alert Type: Info
+            </div>
+            <div class="alert-actions">
+                <button class="btn alert-action">Action</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main App Header -->
+    <header class="header header-2">
+        <div class="branding">
+            <div style="width:40px;margin-right:10px;"><s-logo></s-logo></div>
+            <!-- clr-icon shape="target" class="is-solid is-inverse"></clr-icon -->
+            <span class="title">SprinGular</span>
+        </div>
+        <div class="header-nav">
+            <a *ngFor="let header of appHeaderItems let idx = index" class="nav-link" [routerLink]="header.href" routerLinkActive="active" ><span class="nav-text">{{ header.label }}</span></a>
+        </div>
+        <div class="header-actions">
+            <!-- <label style="line-height: 60px; cursor: pointer;"> {{userName}}</label> -->
+            <clr-dropdown [clrCloseMenuOnItemClick]="true">
+                <button clrDropdownTrigger>
+                    <label style="line-height: 60px; cursor: pointer;"> {{userName}}</label>
+                    <clr-icon shape="caret down"></clr-icon>
+                </button>
+                <clr-dropdown-menu clrPosition="bottom-right" *clrIfOpen>
+                    <label class="dropdown-header" aria-hidden="true">{{ userName }}</label>
+                    <!-- <div clrDropdownItem>Action 1</div> -->
+                    <div routerLink='profile-settings'  clrDropdownItem>Profile Settings</div>
+                    <div routerLink='user-account'  clrDropdownItem>User Account</div>
+                </clr-dropdown-menu>
+            </clr-dropdown>
+
+            <a [routerLink]="'/logout'" class="nav-link nav-text"> <clr-icon shape="power"></clr-icon></a>
+        </div>
+    </header>
+      <!-- Sub Nav Item for Header Items NIL -->
+    <!-- <nav *ngIf ="appHeaderItems[selectedHeaderItemIndex].subNav && appHeaderItems[selectedHeaderItemIndex].subNav.length > 0 " class="subnav" >
+        <ul class="nav">
+            <li *ngFor="let subNavItem of appHeaderItems[selectedHeaderItemIndex].subNav let idx=index" class="nav-item">
+                <a class="nav-link" [routerLink]="subNavItem.href" routerLinkActive="active" >{{ subNavItem.label }}</a>
+            </li>
+        </ul>
+    </nav> -->
+    <!-- Main App Header End -->
+
+    <!-- SIDE NAV -->
+    <div class="content-container">
+        <div class="content-area">
+            <router-outlet></router-outlet>
+        </div>
+        <!-- SIDE NAV -->
+        <clr-vertical-nav [clrVerticalNavCollapsible]="true">
+			<clr-vertical-nav-group routerLinkActive="active">
+				<clr-icon shape="user" clrVerticalNavIcon></clr-icon>
+				Normal
+				<clr-vertical-nav-group-children>
+					<a clrVerticalNavLink routerLink="/home/orders" routerLinkActive="active">
+						Order
+					</a>
+					<a clrVerticalNavLink routerLink="/home/products" routerLinkActive="active">
+						Product
+					</a>
+				</clr-vertical-nav-group-children>
+            </clr-vertical-nav-group>
+            <!-- end -->
+			<!-- <clr-vertical-nav-group routerLinkActive="active">
+				<clr-icon shape="flame" clrVerticalNavIcon></clr-icon>
+				Fire
+				<clr-vertical-nav-group-children>
+					<a clrVerticalNavLink routerLink="./fire/charmander" routerLinkActive="active">
+						Charmander
+					</a>
+					<a clrVerticalNavLink routerLink="./fire/charizard" routerLinkActive="active">
+						Charizard
+					</a>
+				</clr-vertical-nav-group-children>
+			</clr-vertical-nav-group>
+			<clr-vertical-nav-group routerLinkActive="active">
+				<clr-icon shape="bolt" clrVerticalNavIcon></clr-icon>
+				Electric
+				<clr-vertical-nav-group-children>
+					<a clrVerticalNavLink routerLink="./electric/pikachu" routerLinkActive="active">
+						Pikachu
+					</a>
+					<a clrVerticalNavLink routerLink="./electric/raichu" routerLinkActive="active">
+						Raichu
+					</a>
+				</clr-vertical-nav-group-children>
+			</clr-vertical-nav-group> -->
+			<a clrVerticalNavLink routerLinkActive="active" routerLink="./credit">
+				<clr-icon shape="certificate" clrVerticalNavIcon></clr-icon>
+				Credit
+			</a>
+		</clr-vertical-nav>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AACA,AAAA,WAAW,CAAA;EACP,OAAO,EAAC,IAAI;EACZ,cAAc,EAAE,GAAG;EACnB,eAAe,EAAC,aAAa;CAEhC;;AALD,AAII,WAJO,CAIP,MAAM,CAAA;EAAC,OAAO,EAAC,IAAI;CAAG;;AAG1B,AAAA,aAAa,CAAA;EACT,KAAK,EAAC,KAAK;CACd",
+    "sources": [
+        "readonly-student.scss",
+        "../../../../../assets/scss/_var.scss"
+    ],
+    "names": [],
+    "file": "readonly-student.css"
+}

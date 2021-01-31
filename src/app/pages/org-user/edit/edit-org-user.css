@@ -1,0 +1,36 @@
+.s-info-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.s-info-bar button {
+  outline: none;
+}
+
+.edit-pg {
+  width: 750px;
+}
+
+#lines table, #lines th, #lines td {
+  border: 0.5px solid  #f1f0f0;
+  border-collapse: collapse;
+}
+
+#lines input, #lines input :focus {
+  outline: none;
+  border-width: 0px;
+  border: none;
+}
+
+#lines .add-role a, #lines .add-role a label {
+  cursor: pointer;
+}
+/*# sourceMappingURL=edit-org-user.css.map */

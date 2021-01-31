@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AACA,AAAA,WAAW,CAAC;EACR,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,GAAG;EACnB,eAAe,EAAE,aAAa;CAIjC;;AAPD,AAII,WAJO,CAIP,MAAM,CAAC;EACH,OAAO,EAAE,IAAI;CAChB;;AAGL,AAAA,aAAa,CAAC;EACV,KAAK,EAAC,KAAK;CACd;;AAED,AAAA,SAAS,CAAC;EACN,QAAQ,EAAC,QAAQ;EACjB,UAAU,EAAE,QAAQ;EACpB,GAAG,EAAE,IAAI;EACT,IAAI,EAAE,KAAK;CACd",
+    "sources": [
+        "readonly-extension.scss",
+        "../../../../assets/scss/_var.scss"
+    ],
+    "names": [],
+    "file": "readonly-extension.css"
+}

@@ -1,0 +1,87 @@
+<div class="entry-pg pad-16">
+    <h3><b>ADD USERS</b></h3>
+    <br />
+    <!-- Header form start -->
+    <section class="form-block" style="margin-top:32px">
+        <!-- entry form-->
+        <form [formGroup]="entryForm" (ngSubmit)="onSubmit()">
+            <table>
+                <tr>
+                    <td style="width:125px;">First Name: </td>
+                    <td><input colspan="2" type="text" formControlName="firstName" placeholder="Enter First Name"
+                            style="width:180px"></td>
+                </tr>
+                <tr>
+                    <td style="width:125px;">Email: </td>
+                    <td>
+                        <input colspan="2" type="text" formControlName="email" placeholder="Enter Form Name"
+                            style="width:180px">
+                    </td>
+                </tr>
+<!--                 <tr>
+                    <td style="width:125px;">Last Name: </td>
+                    <td><input colspan="2" type="text" formControlName="lastName" placeholder="Enter Last Name"
+                        style="width:180px"></td>
+                </tr>
+                <tr>
+                    <td style="width:125px;">Full Name: </td>
+                        <td><input colspan="2" type="text" formControlName="fullName" placeholder="Enter Full Name"
+                            style="width:180px"></td>
+                       
+                </tr> -->
+                <tr>
+                    <td style="width:125px;">Depertment: </td>
+                        <td><input colspan="2" type="text" formControlName="department" placeholder="Enter Depertment"
+                            style="width:180px"></td>
+                       
+                </tr>
+                <!-- <tr>
+                    <td style="width:125px;">Menu Group </td>
+                    <td>
+                        <select colspan="2" type="text" formControlName="menu_group_id" style="width:180px">
+                            <option value="">Choose Type</option>
+                            <option *ngFor="let menu of menu_group" [ngValue]="menu.id">{{ menu_name }}</option>
+                        </select>
+                    
+                    </td>
+                </tr> -->
+            </table>
+           <!--  <br>
+            <h4><b>Roles</b></h4> -->
+            <!-----H-L LINE part(FormArray For Multiple Lines)---->
+<!--             <div class="row">
+                <div class="col-lg-12">
+                    <table class="table" style="width:50%;" formArrayName="roles">
+                        <thead>
+                            <tr>
+                                <th class="left" style="width:125px;">Role Name</th>
+                                <th class="right" style="width:125px;">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of controls; let i=index" [formGroupName]="i">
+                                <td class="left">
+                                    <select colspan="2" formControlName="name" style="width:180px">
+                                        <option value="">---SELECT ROLES---</option>
+                                        <option *ngFor="let role of roles" [ngValue]="role">{{ role }}</option>
+                                    </select>
+                                </td>
+                                <td style="width:40px;">
+                                    <a *ngIf="controls.length > 1" (click)="onRemoveLines(i)">
+                                        <clr-icon shape="trash" class="is-error"></clr-icon>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <button type="button" class="btn btn-primary button1" (click)="onAddLines()">
+                            <clr-icon shape="plus"></clr-icon>
+                        </button>
+                    </table>
+                </div>
+            </div> -->
+            <br>
+            <button type="submit" class="btn btn-primary" [disabled]="!entryForm.valid">SUBMIT</button>
+        </form>
+    </section>
+
+</div>

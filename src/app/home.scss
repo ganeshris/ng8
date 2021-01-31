@@ -1,0 +1,13 @@
+@import '../assets/scss/var';
+
+a.disabled {
+    pointer-events: none;
+    cursor: default;
+}
+
+.button {
+    display:block;
+    border: none;
+    outline: none;
+}
+ 

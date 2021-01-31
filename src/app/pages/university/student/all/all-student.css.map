@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AACA,AAAA,WAAW,CAAC;EACR,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,GAAG;EACnB,eAAe,EAAE,aAAa;CAIjC;;AAPD,AAII,WAJO,CAIP,MAAM,CAAC;EACH,OAAO,EAAE,IAAI;CAChB;;AAGL,AAAA,QAAQ,CAAC;EACL,KAAK,EAAC,KAAK;CACd;;AAGD,AAAA,IAAI,CAAC;EAED,QAAQ,EAAE,KAAK;EACf,UAAU,EAAE,QAAQ;EACpB,GAAG,EAAE,GAAG;EACR,IAAI,EAAE,GAAG;CACZ",
+    "sources": [
+        "all-student.scss",
+        "../../../../../assets/scss/_var.scss"
+    ],
+    "names": [],
+    "file": "all-student.css"
+}

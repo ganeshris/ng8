@@ -1,0 +1,30 @@
+<div class="read-only-pg pad-16">
+    <h3>STUDENT EDIT FORM</h3>
+    <br />
+
+    <section class="form-block" style="margin-top:32px">
+        <form (ngSubmit)="onSubmit()">
+        <table>
+            <tr>
+                <td style="width:125px;">Name: </td>
+                <td><input colspan="2" type="text" name="firstName" [(ngModel)]="student.name" style="width:120px"></td>
+            </tr>
+            <tr>
+                <td>Depertment: </td>
+                <td colspan="2"><input type="text" name="depertment" [(ngModel)]="student.depertment"> </td>
+            </tr>
+            <tr>
+                <td>Roll Number:</td>
+                <td colspan="2"><input type="number" name="rollNumber" [(ngModel)]="student.rollNumber"> </td>
+            </tr>
+        </table>
+        <br>
+        <button type="submit" form-control class="btn btn-primary">UPDATE</button>
+    </form>
+    </section>
+</div>
+
+
+
+
+

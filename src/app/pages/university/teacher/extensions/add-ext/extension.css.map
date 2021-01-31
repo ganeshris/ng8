@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AACA,AAAA,WAAW,CAAC;EACV,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,GAAG;EACnB,eAAe,EAAE,aAAa;CAI/B;;AAPD,AAIE,WAJS,CAIT,MAAM,CAAC;EACL,OAAO,EAAE,IAAI;CACd;;AAGH,AAAA,SAAS,CAAC;EACR,KAAK,EAAE,KAAK;CACb",
+    "sources": [
+        "extension.scss",
+        "../../../../../../assets/scss/_var.scss"
+    ],
+    "names": [],
+    "file": "extension.css"
+}

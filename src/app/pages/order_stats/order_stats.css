@@ -1,0 +1,28 @@
+h4 {
+  margin-top: 16px;
+}
+
+.s-order-dash-pg {
+  margin: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.s-order-dash-pg .chart-box {
+  margin: 16px;
+  padding: 0 16px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+}
+/*# sourceMappingURL=order_stats.css.map */

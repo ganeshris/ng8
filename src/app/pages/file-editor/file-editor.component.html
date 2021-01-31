@@ -1,0 +1,64 @@
+<script src="js/FileSaver.js"></script>
+<div class="row">
+  <div class="col-xs-12">
+    <!-- PAGE CONTENT BEGINS -->
+    <div class="row">
+      <div class="col-xs-12">
+
+        <div class="clearfix">
+          <div class="pull-right tableTools-container"></div>
+        </div>
+        <!-- FILE VIEWER -->
+        <div>
+          <div class="table-header">
+            <h3>Files</h3>
+          </div>
+          
+         <!--  <label for="files">Files</label>
+          <select class="clr-dropdown" id="files" name="files" (change)="readFile($event)">
+            <option value="-1" selected>choose file</option>
+            <option *ngFor="let file of data" [value]="file.fileLocation">{{ file.fileName }}
+            </option>
+          </select> -->
+
+
+          <ul *ngFor="let fileList of data">
+            <a (click)="readFile(fileList.id, fileList.fileLocation)">
+              <li>{{ fileList.fileName }}</li>
+            </a>
+          </ul>
+          <!-- CODE EDITOR by candidate -->
+          <!--   <div class="table-header">Edit Code</div>
+            <editor apiKey="rvqgqp7e0yeyux0b5qmil140ff1ynmcf5hb7ewi3qkfe5za2"
+              plugins="wordcount"
+              [(ngModel)]="textData">
+            </editor>
+          <button  id="sub" (click)="saveTextAsFile()"> Save </button> -->
+
+          <!-- By Niladri Sen -->
+          <!-- <div class="table-header">Edit Code</div>
+            <editor apiKey="rvqgqp7e0yeyux0b5qmil140ff1ynmcf5hb7ewi3qkfe5za2"
+              plugins="wordcount"
+              [init]="editorConfig"
+              [(ngModel)]="editedData.text">
+            </editor>
+           <button id="sub" (click)="saveTextIntoFile()"> Save </button> -->
+          
+           <br>
+           <h4><b>TEXT EDITOR</b></h4>
+           <button style="float: right;" class="btn btn-primary" (click)="saveTextIntoFile()">Save</button>
+           <!-- codemirror implementation -->
+           <br>
+          <codemirror
+            #editor
+            [config]="codeMirrorOptions" 
+            [(ngModel)]="editedData.text"
+          >
+          </codemirror>
+          
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

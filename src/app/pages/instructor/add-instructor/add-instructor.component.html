@@ -1,0 +1,46 @@
+<div class="entryform">
+    <h3>USER</h3>
+    <div class="userdetails">
+      <p> User Details</p>
+      </div>
+  
+  <form [formGroup]="entryForm" (ngSubmit)="onSubmit()" class="clr-form">
+    <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-6">
+        <label for="basic" class="clr-control-label required">First Name</label>
+        <div class="clr-control-container">
+          <div class="clr-input-wrapper">
+            <input type="text" id="basic"  formControlName="firstName" placeholder="Enter First Name" class="clr-input" required />
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-lg-6 col-md-6">
+        <label for="basic" class="clr-control-label required">Last Name</label>
+        <div class="clr-control-container">
+          <div class="clr-input-wrapper">
+            <input type="text" id="basic" formControlName="lastName" placeholder="Enter Last Name" class="clr-input" required/>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-lg-6 col-md-6">
+            <label for="basic" class="clr-control-label required" >Email</label>
+                <div class="clr-control-container">
+                  <div class="clr-input-wrapper">
+                    <input type="text" id="basic"  formControlName="email" placeholder="Enter Email" class="clr-input" required />
+                  </div>
+                </div>
+      </div>
+    </div>
+    </div>
+  
+    <div class="mybtn">
+      <button class="btn" [disabled]="!entryForm.valid">Submit</button>
+    </div>
+    </form>
+    </div>
+  <hr>
+    
+  

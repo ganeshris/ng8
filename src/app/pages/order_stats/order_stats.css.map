@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AACA,AAAA,EAAE,CAAA;EAAC,UAAU,EAAE,IAAI;CAAG;;AACtB,AAAA,gBAAgB,CAAC;EACf,MAAM,EAAE,GAAG;EACX,OAAO,EAAC,IAAI;EACZ,SAAS,EAAC,IAAI;EACd,cAAc,EAAC,GAAG;EAClB,eAAe,EAAC,MAAM;CAQvB;;AAbD,AAME,gBANc,CAMd,UAAU,CAAA;EACR,MAAM,EAAC,IAAI;EACX,OAAO,EAAC,MAAM;EACd,gBAAgB,EAAE,IAAI;EACtB,MAAM,EAAC,cAAc;EACrB,aAAa,EAAE,GAAG;CACnB",
+    "sources": [
+        "order_stats.scss",
+        "../../../assets/scss/_var.scss"
+    ],
+    "names": [],
+    "file": "order_stats.css"
+}

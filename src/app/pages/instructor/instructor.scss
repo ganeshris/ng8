@@ -1,0 +1,21 @@
+@import "../../../assets/scss/var";
+.s-info-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    button {
+        outline: none;
+    }
+}
+
+.grid-header {
+    h3 {
+    text-align: center;
+    top: 8px;
+    }
+    button {
+        //position: relative;
+        //right: 90px;
+        //top: 81px;
+    }
+}

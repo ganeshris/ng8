@@ -1,0 +1,114 @@
+{
+    "id": 6,
+    "companyName": "TCS",
+    "workspace": "test-workspace",
+    "gstNumber": "12547782",
+    "users": [
+        {
+            "createdAt": "2020-07-26T14:42:30.000+0000",
+            "updatedAt": "2020-12-09T18:22:24.000+0000",
+            "createdBy": null,
+            "updatedBy": null,
+            "userId": 1,
+            "firstName": "Theresa",
+            "lastName": "Russell",
+            "fullName": "Theresa Russell",
+            "email": "admin@gmail.com",
+            "username": "admin",
+            "password": "$2b$10$AkngMoFbJhllHomzUFdwAehsPzbHxY31XXtWTr0Cnpo9OYs7enn0q",
+            "menu_group_id": 1,
+            "status": "active",
+            "department": "IT",
+            "about": "I AM A FREELANCER",
+            "photos": "profile-pic-1.jpeg",
+            "role": "ADMIN",
+            "roles": [
+                {
+                    "id": 1,
+                    "name": "USER",
+                    "description": "ROLE USER"
+                },
+                {
+                    "id": 2,
+                    "name": "ADMIN",
+                    "description": "ROLE ADMIN"
+                }
+            ],
+            "blocked": false
+        },
+        {
+            "createdAt": "2020-07-26T14:42:30.000+0000",
+            "updatedAt": "2020-07-26T14:42:30.000+0000",
+            "createdBy": null,
+            "updatedBy": null,
+            "userId": 20,
+            "firstName": "Sandy",
+            "lastName": "Saha",
+            "fullName": null,
+            "email": "test10@gmail.com",
+            "username": null,
+            "password": "$2a$10$nWxQjNY8n4JLF6xVA.yWDe6EQMwkCXqJulJHxXD1ENPGgN0gXnRNi",
+            "menu_group_id": 0,
+            "status": null,
+            "department": null,
+            "about": null,
+            "photos": null,
+            "role": null,
+            "roles": [
+                {
+                    "id": 1,
+                    "name": "USER",
+                    "description": "ROLE USER"
+                },
+                {
+                    "id": 3,
+                    "name": "BILLING",
+                    "description": "ROLE BILLING"
+                },
+                {
+                    "id": 2,
+                    "name": "ADMIN",
+                    "description": "ROLE ADMIN"
+                }
+            ],
+            "blocked": false
+        },
+        {
+            "createdAt": "2020-12-08T11:44:17.000+0000",
+            "updatedAt": "2020-12-08T11:44:17.000+0000",
+            "createdBy": null,
+            "updatedBy": null,
+            "userId": 21,
+            "firstName": "aaa",
+            "lastName": "bbb",
+            "fullName": null,
+            "email": "test@gmail.com",
+            "username": null,
+            "password": "$2a$10$NYJtYAiqp07EM/nqMCKlBOG4u6mxGzCFIe0OoMriCzv8rHGv9Rnti",
+            "menu_group_id": 0,
+            "status": null,
+            "department": "DEV",
+            "about": null,
+            "photos": null,
+            "role": null,
+            "roles": [
+                {
+                    "id": 5,
+                    "name": "COLLABORATOR",
+                    "description": "ROLE COLLABORATOR"
+                },
+                {
+                    "id": 1,
+                    "name": "USER",
+                    "description": "ROLE USER"
+                },
+                {
+                    "id": 4,
+                    "name": "REVIEWER",
+                    "description": "ROLE REVIEWER"
+                }
+            ],
+            "blocked": false
+        }
+    ]
+}

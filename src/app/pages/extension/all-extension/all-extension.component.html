@@ -1,0 +1,54 @@
+<div class="pad-16">
+    <h3>GRID VIEW</h3>
+    <button id="add" class="btn btn-primary" (click)="goToAdd()"><clr-icon shape="plus"></clr-icon>ADD</button>
+<!-- style='width:600px; height: 400px;' -->
+<br/>
+
+<clr-alert *ngIf="alertMessage" [clrAlertType]="alertType">
+    <clr-alert-item>
+        <span class="alert-text">
+            {{ alertMessage }}
+        </span>
+    </clr-alert-item>
+</clr-alert>
+
+    <ngx-datatable
+        #table
+        style='height:450px; width:75%;'
+        [rows]="rows"
+        [columns]="columns"
+        [columnMode]="'standard'"
+        [headerHeight]="45"
+        [footerHeight]="45"
+        [rowHeight]="36"
+        [scrollbarV]="true"
+    >
+    </ngx-datatable>
+</div>
+<ng-template #extById let-row="row" let-value="value" let-i="index">
+    <a (click)="goToReadOnly(value)" attr.data-itemid="{{value}}"><clr-icon shape="eye"  class="is-info"></clr-icon></a>
+    <a (click)="goToEdit(value)" attr.data-itemid="{{value}}"><clr-icon shape="edit" class="is-error"></clr-icon></a>
+  </ng-template>
+
+<!-- <ng-template #productDiscontinuedTpl let-row="row" let-value="value">
+   <div class="toggle-switch">
+        <input type="checkbox" [id]="row.id" [attr.checked]="value==1?true:false" checked />
+        <label [for]="row.id"></label>
+   </div>
+</ng-template> -->
+<ng-template #showInGrid let-row="row" let-value="value">
+    <div class="toggle-switch">
+         <input type="checkbox" 
+            [id]="row.id" 
+            (click)="toggle(row.id)" 
+            [checked]="isChecked(row.id)"/>
+         <label [for]="row.id"></label>
+    </div>
+ </ng-template>
+
+
+<button type="button" 
+    class="btn btn-primary"
+    [disabled]="extensionField.length > 0 ? false : true"
+    (click)="buildExtension()">BUILD</button>
+

@@ -1,0 +1,107 @@
+<div class="entry-pg pad-16">
+    <h3><b>ENTRY FORM</b></h3>
+
+    <!--  <a id="build_extension" [routerLink] = "['../../extension/all']">
+        <clr-icon shape="airplane" size="32"></clr-icon>
+    </a> -->
+
+    <!-- <a id="build_extension" (click)="goToExt()">
+        <clr-icon shape="airplane" size="32"></clr-icon>
+    </a> -->
+
+
+    <!-- teacher form start -->
+    <br />
+    <h4>Teacher</h4>
+    <section class="form-block" style="margin-top:32px">
+        <!-- entry form-->
+        <form [formGroup]="entryForm" (ngSubmit)="onSubmit()">
+            <table>
+                <tr>
+                    <td style="width:125px;">Name: </td>
+                    <td>
+                        <input colspan="2" type="text" formControlName="name" placeholder="Enter Name"
+                            style="width:180px">
+                    </td>
+                    <div *ngFor="let item of errorMsg">
+                        <span *ngIf="item.field === 'name'" class="text text-danger">{{ item.message }}</span>
+                    </div>
+                </tr>
+                <tr>
+                    <td style="width:125px;">Email: </td>
+                    <td><input colspan="2" type="email" formControlName="email" placeholder="Enter Email"
+                            style="width:180px"></td>
+                    <div *ngFor="let item of errorMsg">
+                        <div *ngIf="item.field === 'email'">
+                            <span class="text text-danger">{{ item.message }}</span>
+                        </div>
+                    </div>
+
+                </tr>
+                <tr>
+                    <td style="width:125px;">Mobile Number: </td>
+                    <td><input colspan="2" type="number" formControlName="phoneNumber" placeholder="Enter Mobile Number"
+                            style="width:180px"></td>
+                    <div *ngFor="let item of errorMsg">
+                        <div *ngIf="item.field === 'phoneNumber'">
+                            <span class="text text-danger">{{ item.message }}</span>
+                        </div>
+                    </div>
+                </tr>
+                <tr>
+                    <td style="width:125px;">Salary: </td>
+                    <td><input colspan="2" type="number" formControlName="salary" placeholder="Enter Salary"
+                            style="width:180px"></td>
+                    <div *ngFor="let item of errorMsg">
+                        <div *ngIf="item.field === 'salary'">
+                            <span class="text text-danger">{{ item.message }}</span>
+                        </div>
+                    </div>
+                </tr>
+            </table>
+            <!-- EXTENSION FIELDS START -->
+            <teacher-add-extension [extensionForm]="entryForm"></teacher-add-extension>
+            <!-- EXTENSION FIELDS END-->
+
+            <!-----H-L LINE part(FormArray For Multiple Lines)---->
+            <br>
+            <h4>Students</h4>
+            <br>
+            <div class="row">
+                <div class="col-lg-12">
+                    <table class="table" style="width:100%;" formArrayName="students">
+                        <thead>
+                            <tr>
+                                <th class="left" style="width:125px;">Name</th>
+                                <th class="left" style="width:125px;">Depertment</th>
+                                <th class="left" style="width:125px;">Roll Number</th>
+                                <th class="right" style="width:125px;">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of controls; let i=index" [formGroupName]="i">
+                                <td class="left"> <input type="text" formControlName="name" placeholder="Enter Name"
+                                        style="width:180px"></td>
+                                <td class="left"> <input type="text" formControlName="depertment"
+                                        placeholder="Enter Depertment" style="width:180px"></td>
+                                <td class="left"> <input type="number" formControlName="rollNumber"
+                                        placeholder="Enter Roll Number" style="width:180px"></td>
+                                <td style="width:40px;">
+                                    <a *ngIf="controls.length > 1" (click)="onRemoveLines(i)">
+                                        <clr-icon shape="trash" class="is-error"></clr-icon>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <button type="button" class="btn btn-primary button1" (click)="onAddLines()">
+                            <clr-icon shape="plus"></clr-icon>
+                        </button>
+                    </table>
+                </div>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary" [disabled]="!entryForm.valid">SUBMIT</button>
+        </form>
+    </section>
+
+</div>

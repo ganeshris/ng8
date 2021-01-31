@@ -1,0 +1,21 @@
+<!-- <div *ngIf="message"   
+    [ngClass]="
+        { 'alert': message,
+         'alert-success': message.type === 'success',
+         'alert-danger': message.type === 'error' }"
+         >{{message.text}}
+</div> -->
+<!-- <clr-alert *ngIf="alertMessage" [clrAlertType]="alertType">
+    <clr-alert-item>
+        <span class="alert-text">
+            {{ alertMessage }}
+        </span>
+    </clr-alert-item>
+</clr-alert> -->
+<clr-alert *ngIf="message" [clrAlertType]="message.type">
+    <clr-alert-item>
+        <span class="alert-text">
+            {{ message.text }}
+        </span>
+    </clr-alert-item>
+</clr-alert>

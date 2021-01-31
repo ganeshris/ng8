@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "customers.scss",
+        "../../../assets/scss/_var.scss"
+    ],
+    "names": [],
+    "file": "customers.css"
+}

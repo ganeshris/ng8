@@ -1,0 +1,33 @@
+@import '../../../../../assets/scss/var';
+.s-info-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    button {
+        outline: none;
+    }
+}
+
+.grid-pg {
+    width:750px;
+}
+
+
+#add {
+    position:absolute;
+    //position: fixed !important;
+    transition: .5s ease;
+    top: 16%;
+    left: 79%; 
+}
+
+#who_column {
+    position:absolute;
+    //position: fixed !important;
+    transition: .5s ease;
+    //top: 16%; // 28 down // barale niche nambe
+    //left: 13%; // komale left e jabe
+    top: 97px; // barale niche
+    left: 145px; // barale dan
+
+}

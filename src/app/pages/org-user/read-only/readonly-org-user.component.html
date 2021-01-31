@@ -1,0 +1,96 @@
+<div class="read-only-pg pad-16" *ngIf="org_user">
+    <!-- <h3>READ ONLY FORM</h3>
+    <br/>
+    <a id="who_icon" (click)="goToWhoColumns()"><clr-icon shape="help"  class="is-solid" size="32"></clr-icon></a> -->
+    <h3>READ ONLY FORM <a  (click)="goToWhoColumns()">
+        <clr-icon shape="help"  class="is-solid" size="32"></clr-icon>
+    </a></h3>
+    <clr-modal [(clrModalOpen)]="basic">
+        <h3 class="modal-title"><b>Transaction History</b></h3>
+        <div class="modal-body">
+            <table s-header>
+                <tr>
+                    <td><b>Account Id: </b></td>
+                    <td> {{ org_user.accountId }} </td>
+                </tr>
+                <tr>
+                    <td><b>Created By: </b></td>
+                    <td> {{ org_user.createdBy }} </td>
+                </tr>
+                <tr>
+                    <td><b>Created At: </b></td>
+                    <td> {{ org_user.createdAt | date:'medium' }} </td>
+                </tr>
+                <tr>
+                    <td><b>Updated At: </b></td>
+                    <td> {{ org_user.updatedAt | date:'medium' }} </td>
+                </tr>
+                <tr>
+                    <td><b>Updated By: </b></td>
+                    <td> {{ org_user.updatedBy }} </td>
+                </tr>
+            </table>
+            
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-outline" (click)="basic = false">Cancel</button>
+            <button type="button" class="btn btn-primary" (click)="basic = false">Ok</button>
+        </div>
+    </clr-modal>
+    <!-- who column end -->
+
+    <!-- read only form start -->
+    <table class="s-header">
+        <tr>
+            <td>Email </td>
+            <td> {{ org_user.email }} </td>
+        </tr>
+        <tr>
+            <td>First Name </td>
+            <td> {{ org_user.firstName }} </td>
+        </tr>
+        <tr>
+            <td>Last Name </td>
+            <td> {{ org_user.lastName }} </td>
+        </tr>
+        <!-- <tr>
+            <td>Full Name </td>
+            <td> {{ org_user.fullName }} </td>
+        </tr> -->
+        <tr>
+            <td>status </td>
+            <td> {{ org_user.status }} </td>
+        </tr>
+        <tr>
+            <td>Department </td>
+            <td> {{ org_user.department }} </td>
+        </tr>
+    </table>
+    <div class="row">
+        <div class="col-lg-12">
+            <table class="s-order-line table" style="width:100%;">
+                <thead>
+                    <tr>
+                        <th class="left" style="width:200px;">Roles</th>
+                         <th class="left" style="width:200px;">Description</th>
+                        <!-- <th class="right" style="width:150px;">Created At</th>
+                        <th class="right" style="width:150px;">Updated At</th> -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let rl of org_user.roles">
+                        <td class="left">{{ rl.name }}</td>
+                        <td class="left">{{ rl.description }}</td>
+                        <!-- <td class="right">{{ students.createdAt | date:'medium' }}</td>
+                        <td class="right">{{ students.updatedAt | date:'medium' }}</td> -->
+                    </tr>
+                </tbody>
+            </table>
+            <!-- LINE CODE WILL INJECT HERE -->
+            <!-- <router-outlet></router-outlet> -->
+        </div>
+        <button (click)="back()" class="btn btn-primary">
+            <clr-icon shape="caret left"></clr-icon>Back
+        </button>
+    </div>
+</div>

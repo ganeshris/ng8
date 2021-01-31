@@ -1,0 +1,29 @@
+.s-info-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.s-info-bar button {
+  outline: none;
+}
+
+.read-only-pg {
+  width: 750px;
+}
+
+#who_icon {
+  position: absolute;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  top: 94px;
+  left: 293px;
+}
+/*# sourceMappingURL=readonly-extension.css.map */
